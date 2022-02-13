@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate') %>
     <div class="row">
         <h1 class="text-center">New Campground</h1>
-        <div class="col-6 offset-3">
+        <div class="col-md-6 offset-md-3">
             <form action="/campgrounds" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
                 <div class="mb-3">
                     <label class="form-label" for="title">Title</label>
@@ -35,20 +35,13 @@
                         Please enter the price for the stay.
                     </div>
                 </div>
-                <input type="file" name="image" id="" multiple>
-                <!-- <div class="mb-3 ">
-                    <label class="form-label " for="image ">Image URL</label>
-                    <input class="form-control " type="text " name="campground[image] " id="image " required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                    <div class="invalid-feedback">
-                        Please enter the URL of an image of the campground.
-                    </div>
-                </div> -->
+                <div class="mb-3">
+                    <label for="image" class="form-label">Add images</label>
+                    <input class="form-control" type="file" id="image" multiple name="image">
+                </div>
                 <div class="mb-3 ">
                     <label class="form-label" for="location">Description</label>
-                    <textarea class="form-control" type="text" name="campground[description] " id="description" required></textarea>
+                    <textarea class="form-control" type="text" name="campground[description]" id="description" required></textarea>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
